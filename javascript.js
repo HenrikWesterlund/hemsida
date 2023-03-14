@@ -35,8 +35,6 @@ page.addEventListener("click", function (e) {
   }
 });
 
-//CODE TO USE ON YOUR WEBSITE - !!! YOU NEED IT
-
 //hide nav open btn when the nav is open, adding/removing open classes to nav and content
 var navOpenBtn = document.querySelector(".nav-open-btn");
 var navCloseBtn = document.querySelector(".nav__close");

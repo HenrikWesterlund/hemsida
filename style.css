@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap");
 /* hamburgar meny: */
-html,
+
 body {
   margin: 0;
   padding: 0;
@@ -29,8 +29,7 @@ body {
   padding: 30px;
   box-sizing: border-box;
   background-color: #1c1c1c;
-  box-shadow: 4px 0 5px 0 rgba(0, 0, 0, 0.14), 1px 0 10px 0 rgba(0, 0, 0, 0.12),
-    2px 0 4px -1px rgba(0, 0, 0, 0.3);
+
   z-index: 500;
 }
 /* nav list styles */
@@ -170,17 +169,20 @@ body {
 /* ^ hamburgar meny ^ */
 
 .top_menu {
-  position: absolute;
+  /* position: absolute; */
+  display: flex;
+  justify-content: baseline;
   height: 100px;
 }
 
 #logo {
   margin-top: 20px;
+  /* width: 25vw; */
 }
 
 .center {
   width: 100vw;
-  margin-left: 30px;
+  /* margin-left: 60px; */
   /* text-align: center; */
 }
 
@@ -188,8 +190,8 @@ body {
   position: absolute;
   width: 37vw;
   /* height: 120vh; */
-  margin-left: 40px;
-  margin-top: 80px;
+  margin-left: 30px;
+  margin-top: 50px;
   /* opacity: 0.5; */
 }
 
@@ -198,25 +200,92 @@ main {
 }
 
 #rubrik {
-  position: absolute;
+  /* position: absolute; */
   font-size: 5vw;
   color: #000000;
   width: 40vw;
   /* text-align: center; */
-  margin-left: 45vw;
-  margin-top: 150px;
+  /* margin-left: 45vw; */
+  margin-top: 100px;
   font-family: "Archivo", sans-serif;
+}
+
+.textP {
+  /* position: relative; */
+  font-size: 1.5vw;
+  color: #000000;
+  width: 40vw;
+  /* text-align: center; */
+
+  margin-top: -20px;
+}
+
+#texter {
+  margin-left: 45vw;
+  margin-top: -1vw;
 }
 
 .first_page {
   display: flex;
   height: 100vh;
   /* justify-content: center; */
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
+  background-color: #ffffff;
+}
+
+.box {
+  width: 20vw;
+  height: 25vw;
+  background-color: #686868;
+  margin-left: 2vw;
+  border-radius: 5px;
+}
+
+.boxer {
+  width: 25vw;
+  height: 30vw;
+  background-color: #686868;
+  border-radius: 20px;
+  margin-top: 10vw;
+}
+
+.box_side {
+  display: flex;
+  margin-left: -3vw;
+}
+
+.multiboxes {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #fff;
+  z-index: 100;
 }
 
 @media only screen and (max-width: 600px) {
   .img {
-    width: 80vw;
+    width: 100vw;
+    margin-left: 0px;
+    margin-top: 20px;
+    /* opacity: 0.5; */
+    /* max-height: 80vh; */
   }
+  #rubrik {
+    color: #000000;
+    z-index: 10;
+  }
+  #logo {
+    margin-top: 20px;
+    width: 25vw;
+  }
+  .nav-open-btn {
+    top: 20px;
+    right: 25px;
+
+    width: 35px;
+    height: 25px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
 }

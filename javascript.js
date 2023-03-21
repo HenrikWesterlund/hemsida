@@ -23,7 +23,7 @@ navCloseBtn.addEventListener("click", function () {
 page.addEventListener("click", function (e) {
   var evTarget = e.target;
   if (
-    evTarget !== nav &&
+    //evTarget !== nav &&
     nav.classList.contains("js-opened") &&
     evTarget !== navOpenBtn &&
     evTarget.parentNode !== navOpenBtn
@@ -43,61 +43,59 @@ var pageContent = document.querySelector(".page__content");
 var navList = document.querySelector(".nav__list");
 var page = document.querySelector(".page");
 
-//closing navigation if click outside it
-// page.addEventListener("click", function (e) {
-//   var evTarget = e.target;
+function reveal() {
+  var reveals1 = document.querySelectorAll(".reveal1");
+  var reveals2 = document.querySelectorAll(".reveal2");
+  var reveals3 = document.querySelectorAll(".reveal3");
+  var reveals4 = document.querySelectorAll(".reveal4");
+  var revealsLeft = document.querySelectorAll(".revealLeft");
+  var revealsRight = document.querySelectorAll(".revealRight");
+  var revealsUp = document.querySelectorAll(".revealUp");
+  var revealsRight2 = document.querySelectorAll(".revealRight2");
+  var revealsUp3 = document.querySelectorAll(".revealUp3");
 
-//   if (
-//     evTarget !== nav &&
-//     nav.classList.contains("js-opened") &&
-//     evTarget !== navOpenBtn &&
-//     evTarget.parentNode !== navOpenBtn
-//   ) {
-//     console.log(navOpenBtn.firstChild);
+  for (var i = 0; i < reveals2.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop2 = reveals2[i].getBoundingClientRect().top;
+    var elementVisible = 0;
 
-//     // navOpenBtn.classList.remove("js-hidden");
+    if (elementTop2 < windowHeight - elementVisible) {
+      revealsRight2[i].classList.add("active");
+    } else {
+      revealsRight2[i].classList.remove("active");
+    }
+  }
+  for (var i = 0; i < reveals3.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop3 = reveals3[i].getBoundingClientRect().top;
+    var elementVisible = 0;
 
-//     // nav.classList.remove("js-opened");
+    if (elementTop3 < windowHeight - elementVisible) {
+      revealsUp3[i].classList.add("active");
+    } else {
+      revealsUp3[i].classList.remove("active");
+    }
+  }
+  for (var i = 0; i < reveals1.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop1 = reveals1[i].getBoundingClientRect().top;
+    var elementVisible = 100;
 
-//     // pageContent.classList.remove("js-opened");
-//   }
-// });
-//DEMO CODE - !!!YOU DON'T NEED IT
-var demoBtns = document.querySelectorAll(".demo-btn");
+    if (elementTop1 < windowHeight - elementVisible) {
+      revealsLeft[i].classList.add("active");
+      revealsRight[i].classList.add("active");
+      revealsUp[i].classList.add("active");
+    } else {
+      revealsLeft[i].classList.remove("active");
+      revealsRight[i].classList.remove("active");
+      revealsUp[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
 
 //adding default demo classes
 nav.classList.add("nav--offcanvas-1");
 pageContent.classList.add("page__content--offcanvas-1");
-
-// //change demo on btn click
-// demoBtns.forEach(function (el, ind) {
-//   el.addEventListener("click", function () {
-//     //add active class to active btn
-//     demoBtns.forEach(function (el) {
-//       el.classList.remove("js-active");
-//     });
-
-//     this.classList.add("js-active");
-
-//     //add proper classes for effects
-//     var effClass = ind + 1;
-
-//     nav.classList.remove("js-opened");
-
-//     pageContent.classList.remove("js-opened");
-
-//     navCloseBtn.classList.remove("js-opened");
-
-//     navList.classList.remove("js-opened");
-
-//     // navOpenBtn.classList.remove("js-hidden");
-
-//     nav.classList.remove(nav.classList[1]);
-
-//     nav.classList.add("nav--offcanvas-" + effClass);
-
-//     pageContent.classList.remove(pageContent.classList[1]);
-
-//     pageContent.classList.add("page__content--offcanvas-" + effClass);
-//   });
-// });

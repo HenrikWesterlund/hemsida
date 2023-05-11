@@ -1,181 +1,121 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
-/* hamburgar meny: */
 
 body {
   margin: 0;
   padding: 0;
-  min-height: 300vh;
+  /* min-height: 300vh; */
   overflow-x: hidden;
 }
-.page,
-.page__content {
-  position: relative;
-}
-.page {
-  min-height: 14vh;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.page__content {
-  min-height: 14vh;
-  background-color: #fff;
-}
-/* navigation styles */
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 300px;
 
-  padding: 0px;
-  box-sizing: border-box;
-  background-color: #1c1c1c;
-
-  z-index: 500;
-}
-/* nav list styles */
-.nav__list {
-  position: relative;
+* {
   padding: 0;
-  margin: 100px 0 0 0;
-  width: 300px;
-
-  text-align: center;
-  list-style-type: none;
+  margin: 0;
 }
-.nav__link {
-  font-size: 30px;
-  height: 50px;
-  font-family: "Roboto", sans-serif;
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
-  transition-delay: 0s;
-  display: inline-flex;
-  align-items: center;
-  color: #fff;
+
+/* hamburgar meny: */
+
+header {
+  background-color: rgb(255, 255, 255);
+}
+li {
+  list-style: none;
+  width: 100px;
+  /* height: 30px; */
+}
+/* 
+.a1 {
+  color: rgb(0, 0, 0);
   text-decoration: none;
+  height: 50px;
+  font-family: "Archivo", sans-serif;
+} */
+
+.container {
+  max-width: 1224px;
+  width: 90%;
+  margin: 0 auto;
 }
 
-.nav__item {
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.nav__item:hover {
-  background-color: #00a2ff;
+.nav-branding {
+  font-size: 2rem;
 }
-/* nav link icon styles */
-.nav__link-icon {
-  position: relative;
-  top: -3px;
-  margin-right: 10px;
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
 }
-/* close icon styles */
-.nav__close {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  width: 40px;
-  height: 25px;
+.nav-link {
+  transition: 0.3s ease-out;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  height: 50px;
+  font-family: "Archivo", sans-serif;
+}
+.nav-link:hover {
+  color: dodgerblue;
+}
+.hamburger {
+  display: none;
   cursor: pointer;
-  /* close icon elements */
-  /* hover effect */
 }
-.nav__close:before,
-.nav__close:after {
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
-  transition-delay: 0s;
+.bar {
   display: block;
-  width: 4px;
-  height: 28px;
-  border-radius: 10px;
-  content: "";
-
-  transform-origin: center center;
-  background-color: #fff;
-}
-.nav__close:before {
-  position: absolute;
-  top: 0;
-  left: 18px;
-
-  transform: rotate(-45deg);
-}
-.nav__close:after {
-  position: absolute;
-  top: 0;
-  right: 18px;
-
-  transform: rotate(45deg);
-}
-.nav__close:hover:before,
-.nav__close:hover:after {
-  background-color: #00a2ff;
-}
-/* nav open btn styles */
-.nav-open-btn {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
-  transition-delay: 0s;
-  width: 35px;
-  height: 25px;
-  overflow: hidden;
-  cursor: pointer;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: rgb(0, 0, 0);
 }
 
-.nav-open-btn__bar {
-  width: 100%;
-  height: 5px;
-  background-color: #1c1c1c;
-  border-radius: 20px;
+@media (max-width: 1024px) {
+  .hamburger {
+    right: 20px;
+    position: fixed;
+    display: block;
+    z-index: 10000;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 10000;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .nav-link {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+  }
 }
-.nav-open-btn__bar:nth-child(1) {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.nav-open-btn__bar:nth-child(2) {
-  position: absolute;
-  top: 10px;
-  left: 0;
-}
-.nav-open-btn__bar:nth-child(3) {
-  position: absolute;
-  top: 20px;
-  left: 0;
-}
-
-/* Demo #1: styles */
-.nav--offcanvas-1 {
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
-  transition-delay: 0s;
-  left: -300px;
-  /* opened styles */
-}
-.nav--offcanvas-1.js-opened {
-  left: 0;
-}
-.page__content--offcanvas-1 {
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
-  transition-delay: 0s;
-  left: 0;
-  /* opened styles */
-}
-/* ^ hamburgar meny ^ */
 
 .top_menu {
   /* position: absolute; */
@@ -185,7 +125,7 @@ body {
 }
 
 #logo {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   /* width: 25vw; */
   margin-left: 25px;
   width: 150px;
@@ -215,6 +155,12 @@ body {
   /* opacity: 0.5; */
 }
 
+.bild {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
 /* main {
   background-color: rgb(255, 255, 255);
   min-height: 300vh;
@@ -242,7 +188,7 @@ body {
 
 #texter {
   margin-left: 45vw;
-  margin-top: -1vw;
+  /* margin-top: -1vw; */
   width: 50vw;
 }
 
@@ -470,7 +416,7 @@ body {
   box-shadow: -2px 0px 5px rgb(159, 159, 159);
 }
 
-a {
+.a {
   text-decoration: none;
   color: #fff;
 }
@@ -504,6 +450,7 @@ a {
   font-size: 20px;
   /* margin-top: -10%; */
   width: 80%;
+  font-family: "Roboto", sans-serif; /* text-align: center; */
 }
 
 .p em {
@@ -512,7 +459,7 @@ a {
   font-family: "Archivo", sans-serif;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1024px) {
   .img1 {
     /* position: relative; */
     width: 80vw;
@@ -643,8 +590,8 @@ a {
   }
 }
 
-/*----------------------------- Contact ----------------------------------*/
-.kontakt-container {
+/*----------------------------------------------------- Contact ----------------------------------------------------------*/
+.contact-container {
   margin-top: 40px;
   position: relative;
   width: 80%;
@@ -655,7 +602,7 @@ a {
   margin: 20px 9vw;
 }
 
-.kontakt-container:after {
+.contact-container:after {
   content: "";
   position: fixed;
   width: 100%;
@@ -667,7 +614,7 @@ a {
   filter: blur(10px);
   z-index: -1;
 }
-.kontakt-box {
+.contact-box {
   max-width: 850px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -678,7 +625,7 @@ a {
   box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
 }
 
-.Vänstra-sidan {
+.left-side {
   background: url("bildFramsida.jpg") no-repeat center;
   background-size: cover;
   height: 100%;
@@ -686,7 +633,7 @@ a {
   position: absolute; */
 }
 
-.Högra-sidan {
+.right-side {
   padding: 25px 40px;
 }
 
@@ -709,7 +656,7 @@ h1:after {
   background-color: #5edaf0;
 }
 
-.textfält {
+.textinput {
   width: 90%;
   border: 2px solid rgba(0, 0, 0, 0);
   outline: none;
@@ -721,7 +668,7 @@ h1:after {
   font-family: "Roboto", sans-serif;
 }
 
-.textfält:hover {
+.textinput:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -730,7 +677,7 @@ textarea {
   min-height: 150px;
 }
 
-.knapp {
+.button {
   width: 100%;
   padding: 0.5rem 1rem;
   background-color: #5edaf0;
@@ -743,22 +690,22 @@ textarea {
   transition: 0.3s;
 }
 
-.knapp:hover {
+.button:hover {
   background-color: #62e3f9;
 }
 
-.textfält:focus {
+.textinput:focus {
   border: 2px solid rgba(30, 85, 250, 0.47);
   background-color: #fff;
 }
 /*----------- Contact ----------*/
 
 @media only screen and (max-width: 800px) {
-  .Vänstra-sidan {
+  .left-side {
     visibility: hidden;
     position: absolute;
   }
-  .kontakt-box {
+  .contact-box {
     max-width: 850px;
     display: grid;
     grid-template-columns: none;

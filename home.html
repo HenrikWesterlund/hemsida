@@ -16,36 +16,33 @@
     <link rel="shortcut icon" href="ikon.jpg" type="image/x-icon" />
   </head>
   <body class="page">
-    <!-- /* hamburgar meny: */ -->
+    <!-- /*  meny: */ -->
     <header>
-      <div>
-        <nav class="nav">
-          <div class="nav__close"></div>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="home.html" title="Home">Home</a>
+      <div class="container">
+        <nav class="navbar">
+          <!-- <a href="#" class="nav-branding">DEV.</a> -->
+          <img src="logO.jpg" id="logo" />
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="home.html" class="nav-link">Home</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#" title="Cases">Cases</a>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="contact.html" title="Contact Us"
-                >Contact Us</a
-              >
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
             </li>
           </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
         </nav>
-        <div class="center">
-          <img src="logO.jpg" id="logo" />
-        </div>
-        <div class="nav-open-btn">
-          <div class="nav-open-btn__bar"></div>
-          <div class="nav-open-btn__bar"></div>
-          <div class="nav-open-btn__bar"></div>
-        </div>
       </div>
     </header>
-    <!-- ^ hamburgar meny: ^ -->
+    <!-- ^ meny: ^ -->
+
     <main>
       <section class="first_page">
         <div class="container_first">
@@ -75,16 +72,6 @@
                       grow and get measurable and booming results now.
                     </p>
                     <button class="learn-more" id="">Learn more</button>
-
-                    <!-- <h4 class="number">ABOUT US</h4>
-
-                  <p class="description">
-                    At the heart of your strategy must be Facebook and Instagram
-                    ads. 2.6+ billion users on Facebook and 60% of Instagram
-                    users say they find new products on the platform, so it’s a
-                    no-brainer that you should be there!
-                  </p>
-                  <button class="learn-more" id="">LEARN MORE</button> -->
                   </div>
                 </div>
 
@@ -99,15 +86,6 @@
                       grow and get measurable and booming results now.
                     </p>
                     <button class="learn-more" id="">Learn more</button>
-                    <!-- <h4 class="number">ABOUT US</h4>
-
-                  <p class="description">
-                    At the heart of your strategy must be Facebook and Instagram
-                    ads. 2.6+ billion users on Facebook and 60% of Instagram
-                    users say they find new products on the platform, so it’s a
-                    no-brainer that you should be there!
-                  </p>
-                  <button class="learn-more" id="">LEARN MORE</button> -->
                   </div>
                 </div>
               </div>
@@ -145,17 +123,19 @@
               your brand and your ad spend is heading.
               <br />
               <button id="contact">
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.html" class="a">Contact Us</a>
               </button>
             </h3>
 
-            <div class="box2 revealRight"></div>
+            <div class="box2 revealRight">
+              <img src="workbild.jpg" class="bild" id="" />
+            </div>
           </article>
 
           <div id="information_container">
             <article class="">
               <div class="information_box revealUp">
-                <h4 class="number">Social media marketing:</h4>
+                <!-- <h4 class="number">Social media marketing:</h4> -->
 
                 <p class="description">
                   At the heart of your strategy must be Facebook and Instagram
@@ -168,7 +148,7 @@
             </article>
             <article class="">
               <div class="information_box revealUp">
-                <h4 class="number">E-mail marketing:</h4>
+                <!-- <h4 class="number">E-mail marketing:</h4> -->
 
                 <p class="description">
                   Why stop paying for ads? Email marketing is a good example of
@@ -181,7 +161,7 @@
             </article>
             <article class="">
               <div class="information_box revealUp">
-                <h4 class="number">Conversion optimization:</h4>
+                <!-- <h4 class="number">Conversion optimization:</h4> -->
 
                 <p class="description">
                   The difference between sending traffic to a website that
@@ -195,7 +175,7 @@
             </article>
             <article class="">
               <div class="information_box revealUp">
-                <h4 class="number">Google advertising:</h4>
+                <!-- <h4 class="number">Google advertising:</h4> -->
 
                 <p class="description">
                   With Google Ads, you have an immediate way of contacting your
@@ -208,7 +188,7 @@
             </article>
             <article class="">
               <div class="information_box revealUp">
-                <h4 class="number">Content creation:</h4>
+                <!-- <h4 class="number">Content creation:</h4> -->
 
                 <p class="description">
                   To even give your copy and product a chance you need to have
@@ -222,7 +202,7 @@
             </article>
             <article class="">
               <div class="information_box revealUp">
-                <h4 class="number">High converting copywriting:</h4>
+                <!-- <h4 class="number">High converting copywriting:</h4> -->
 
                 <p class="description">
                   Copywriting is essential because it drives profitability,

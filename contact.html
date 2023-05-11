@@ -11,46 +11,42 @@
   <body class="page">
     <!-- /*  meny: */ -->
     <header>
-      <div>
-        <nav class="nav">
-          <div class="nav__close"></div>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="home.html" title="Home">Home</a>
+      <div class="container">
+        <nav class="navbar">
+          <!-- <a href="#" class="nav-branding">DEV.</a> -->
+          <img src="logO.jpg" id="logo" />
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="home.html" class="nav-link">Home</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#" title="Cases">Cases</a>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="contact.html" title="Contact Us"
-                >Contact Us</a
-              >
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
             </li>
           </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
         </nav>
-        <div class="center">
-          <img src="logO.jpg" id="logo" />
-        </div>
-        <div class="nav-open-btn">
-          <div class="nav-open-btn__bar"></div>
-          <div class="nav-open-btn__bar"></div>
-          <div class="nav-open-btn__bar"></div>
-        </div>
       </div>
     </header>
     <!-- ^  meny ^ -->
     <main>
-      <div class="kontakt-container">
-        <div class="kontakt-box">
-          <div class="Vänstra-sidan"></div>
-          <div class="Högra-sidan">
+      <div class="contact-container">
+        <div class="contact-box">
+          <div class="left-side"></div>
+          <div class="right-side">
             <h1>Contact Us</h1>
             <form>
-              <input type="text" class="textfält" placeholder="Full Name" />
-              <input type="text" class="textfält" placeholder="Email" />
-              <input type="text" class="textfält" placeholder="Phone" />
-              <textarea placeholder="Message" class="textfält"></textarea>
-              <input type="submit" value="Submit" class="knapp" />
+              <input type="text" class="textinput" placeholder="Full Name" />
+              <input type="text" class="textinput" placeholder="Email" />
+              <input type="text" class="textinput" placeholder="Phone" />
+              <textarea placeholder="Message" class="textinput"></textarea>
+              <input type="submit" value="Submit" class="button" />
             </form>
           </div>
         </div>

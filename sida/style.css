@@ -9,6 +9,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -140,7 +144,7 @@ li {
 }
 
 .center2 {
-  margin-top: -100px;
+  /* margin-top: -100px; */
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -203,7 +207,7 @@ li {
 .box {
   width: 24vw;
   height: 30vw;
-  background-color: #ededed;
+  background-color: #ffffff;
   border-radius: 20px;
   margin-top: 4vw;
   /* margin-bottom: 100px; */
@@ -211,11 +215,12 @@ li {
   /* left: -100%;
   transform: translateX(-100%);
   transition: all 0.5s ease-out; */
-  box-shadow: -2px 0px 5px rgb(216, 216, 216);
+  box-shadow: 0px 0px 30px rgb(216, 216, 216);
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  z-index: 1000;
 }
 
 /* slide ins: */
@@ -350,7 +355,7 @@ li {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  box-shadow: -2px 0px 5px rgb(159, 159, 159);
+  box-shadow: 0px 0px 10px rgb(159, 159, 159);
   /* display: flex; */
   margin: 5px;
   margin-bottom: 20px;
@@ -419,6 +424,8 @@ li {
 .a {
   text-decoration: none;
   color: #fff;
+  cursor: pointer;
+  z-index: 100000;
 }
 
 .ikon {
@@ -455,8 +462,18 @@ li {
 
 .p em {
   font-size: 20px;
-  color: #00a2ff;
+  color: #0bbeff;
   font-family: "Archivo", sans-serif;
+}
+
+.p2 {
+  text-align: center;
+}
+
+iframe {
+  border-radius: 20px;
+  width: 80vw;
+  height: 300px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -555,6 +572,7 @@ li {
     width: 100vw;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .information_box {
     /* margin-left: 4vw; */
@@ -609,7 +627,7 @@ li {
   height: 100%;
   left: 0;
   top: 0;
-  background: url("bildFramsida.jpg") no-repeat center;
+  background: url("bilder/bildFramsida.jpg") no-repeat center;
   background-size: cover;
   filter: blur(10px);
   z-index: -1;
@@ -626,7 +644,7 @@ li {
 }
 
 .left-side {
-  background: url("bildFramsida.jpg") no-repeat center;
+  background: url("bilder/bildFramsida.jpg") no-repeat center;
   background-size: cover;
   height: 100%;
   /* visibility: hidden;
@@ -653,7 +671,7 @@ h1:after {
   height: 4px;
   width: 50px;
   border-radius: 2px;
-  background-color: #5edaf0;
+  background-color: #0bbeff;
 }
 
 .textinput {
@@ -680,7 +698,7 @@ textarea {
 .button {
   width: 100%;
   padding: 0.5rem 1rem;
-  background-color: #5edaf0;
+  background-color: #0bbeff;
   color: #fff;
   font-size: 1.1rem;
   border: none;
@@ -691,7 +709,7 @@ textarea {
 }
 
 .button:hover {
-  background-color: #62e3f9;
+  background-color: #0bbeff;
 }
 
 .textinput:focus {

@@ -586,8 +586,7 @@ li {
   height: 100%;
   left: 0;
   top: 0;
-  background: url("C:/Users/Elev/Desktop/Programmering/Webbutveckling1/tangoscale/sida/bilder/bildFramsida.jpg")
-    no-repeat center;
+  background: url("../bilder/bildFramsida.jpg") no-repeat center;
   background-size: cover;
   filter: blur(10px);
   z-index: -1;
@@ -604,8 +603,7 @@ li {
 }
 
 .left-side {
-  background: url("C:/Users/Elev/Desktop/Programmering/Webbutveckling1/tangoscale/sida/bilder/bildFramsida.jpg")
-    no-repeat center;
+  background: url("../bilder/bildFramsida.jpg") no-repeat center;
   background-size: cover;
   height: 100%;
 }

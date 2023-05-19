@@ -16,9 +16,9 @@ document.querySelectorAll(".nav-link").forEach((n) =>
 );
 
 function reveal() {
-  var revealsLeft = document.querySelectorAll(".revealLeft");
-  var revealsRight = document.querySelectorAll(".revealRight");
-  var revealsUp = document.querySelectorAll(".revealUp");
+  var revealsLeft = document.querySelectorAll(".reveal-left");
+  var revealsRight = document.querySelectorAll(".reveal-right");
+  var revealsUp = document.querySelectorAll(".reveal-up");
 
   for (var i = 0; i < revealsLeft.length; i++) {
     var windowHeight = window.innerHeight;

@@ -7,13 +7,17 @@
       content="width=device-width,initial-scale=1.0,user-scalable=no"
     />
     <title>Website</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- <script src="javascript.js" defer></script> -->
     <script
       src="https://kit.fontawesome.com/6f6b4db403.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="shortcut icon" href="ikon.jpg" type="image/x-icon" />
+    <!-- <link rel="shortcut icon" href="ikon.jpg" type="image/x-icon" /> -->
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
   </head>
   <body class="page">
     <!-- /*  meny: */ -->
@@ -45,27 +49,48 @@
 
     <main>
       <div class="center2">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8114.308648529353!2d18.05745553600212!3d59.44012645482849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9b937e97af13%3A0xef984bf2bc386cb7!2s%C3%85va%20Gymnasium!5e0!3m2!1ssv!2sse!4v1684221602041!5m2!1ssv!2sse"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <h1>About us:</h1>
       </div>
-      <p class="p p2">
-        Our approach to eCommerce will give your business that extra adrenaline
-        shot it needs. We work closely with each brand to create strategies that
-        produce unparalleled results. We love eCommerce and thrive to outperform
-        your competitors.Here at TangoScale, we’ve worked with the best in the
-        industry to produce enormous returns on investment, getting the most out
-        of their business through a well structured team and through the systems
-        we use
-      </p>
+      <div class="center2">
+        <div id="map" style="width: 400px; height: 300px"></div>
+        <p class="p p2">
+          To find us come to Åva Gymansium!
+          <br />
+          <br />
+          Our approach to eCommerce will give your business that extra
+          adrenaline shot it needs. We work closely with each brand to create
+          strategies that produce unparalleled results. We love eCommerce and
+          thrive to outperform your competitors.Here at TangoScale, we’ve worked
+          with the best in the industry to produce enormous returns on
+          investment, getting the most out of their business through a well
+          structured team and through the systems we use
+        </p>
+      </div>
+
+      <div class="center2"></div>
     </main>
-    <footer></footer>
+    <hr />
+    <footer>
+      <div class="footer">
+        <div class="row">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+
+        <div class="row">
+          <ul>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
     <script src="js/javascript.js" defer></script>
+    <script src="js/apimap.js" defer></script>
   </body>
 </html>
